@@ -1,0 +1,14 @@
+{% extends 'atletico/base.html' %}
+
+{% block content %}
+<article>
+    {% if route.published_date %}
+        <time class="date">
+            {{ route.published_date }}
+        </time>
+    {% endif %}
+    <h2>{{ route.title }}</h2>
+    <p>{{ route.description|linebreaksbr }}</p>
+</article>
+
+ {% endblock %}
